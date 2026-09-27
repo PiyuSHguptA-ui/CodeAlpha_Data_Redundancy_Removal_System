@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Redundancy Removal System</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<div><span class="badge">CodeAlpha • Cloud Computing • Task 1</span>
+<h1>Data Redundancy Removal System</h1>
+<p>Validate incoming data, detect duplicates, and store only unique and verified records.</p></div>
+<div class="status-pill"><span></span> System Online</div>
+</header>
+<section class="stats">
+<div class="stat-card"><span>Total Records</span><strong id="totalRecords">0</strong></div>
+<div class="stat-card"><span>Verified Records</span><strong id="verifiedRecords">0</strong></div>
+<div class="stat-card"><span>Duplicate Attempts</span><strong id="duplicateAttempts">0</strong></div>
+</section>
+<main class="grid">
+<section class="card">
+<div class="card-heading"><div><h2>Add New Data</h2><p>New records are checked before storage.</p></div><div class="shield">✓</div></div>
+<form id="dataForm">
+<label>Name<input id="name" type="text" placeholder="Enter full name" required></label>
+<label>Email<input id="email" type="email" placeholder="example@email.com" required></label>
+<label>Data Description<textarea id="description" rows="4" placeholder="Enter data description" required></textarea></label>
+<button type="submit">Validate & Add Record</button><div id="message" class="message"></div>
+</form>
+</section>
+<section class="card">
+<div class="card-heading"><div><h2>Verified Data</h2><p>Only accepted unique records appear here.</p></div><button class="refresh" id="refreshBtn">Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Description</th><th>Status</th><th>Action</th></tr></thead>
+<tbody id="recordsBody"><tr><td colspan="6" class="empty">Loading records...</td></tr></tbody></table></div>
+</section>
+</main>
+<footer><span>CodeAlpha Internship Project</span><span>Local JSON persistence • Node.js + Express</span></footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
